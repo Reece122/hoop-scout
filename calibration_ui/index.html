@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>hoop-scout calibration</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; display: flex; }
+  #canvas-wrap { flex: 1; }
+  canvas { max-width: 100%; cursor: crosshair; border-right: 1px solid #ccc; }
+  #panel { width: 340px; padding: 16px; }
+  .landmark { padding: 8px; margin-bottom: 4px; border-radius: 4px; background: #f0f0f0; }
+  .landmark.done { background: #d4edda; }
+  .landmark.active { background: #fff3cd; font-weight: bold; }
+  textarea { width: 100%; height: 160px; }
+  button { margin-top: 8px; padding: 8px 12px; }
+  h3 { margin-top: 24px; }
+  input[type=text] { width: 60px; }
+  .roster-row { display: flex; gap: 8px; align-items: center; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+  <div id="canvas-wrap">
+    <input type="file" id="frame-input" accept="image/*" />
+    <div>Upload a still frame from the clip (e.g. exported with ffmpeg), then click each landmark below in order.</div>
+    <canvas id="canvas"></canvas>
+  </div>
+  <div id="panel">
+    <h3>1. Court landmarks (click on image, in order)</h3>
+    <div id="landmark-list"></div>
+
+    <h3>2. Basket direction</h3>
+    <label>Basket x (ft) being attacked on this half:
+      <input type="text" id="basket-x" value="0" />
+    </label>
+
+    <h3>2b. Footage type</h3>
+    <label>
+      <input type="checkbox" id="has-cuts" />
+      This footage has hard cuts (edited to skip to the next possession, e.g. after every made basket)
+    </label>
+
+    <h3>3. Roster (fill in after a test detection run)</h3>
+    <div id="roster-rows"></div>
+    <button id="add-roster-row">+ add track ID</button>
+
+    <h3>4. Export</h3>
+    <button id="export-calibration">Download calibration.json</button>
+    <button id="export-roster">Download roster.json</button>
+    <textarea id="output" readonly></textarea>
+  </div>
+
+<script>
+// Standard half-court landmarks in feet, near-baseline origin (0,0) at the
+// left baseline corner nearest the camera. Adjust if your camera covers the
+// other half or a different landmark set — landmarks_used records the choice.
+const LANDMARKS = [
+  { label: "Near baseline corner, left sideline", court: [0, 0] },
+  { label: "Near baseline corner, right sideline", court: [0, 50] },
+  { label: "Free-throw line, left edge of lane", court: [19, 17] },
+  { label: "Free-throw line, right edge of lane", court: [19, 33] },
+];
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let imagePoints = [];
+let img = null;
+
+document.getElementById("frame-input").addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  img = new Image();
+  img.onload = () => {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+  };
+  img.src = URL.createObjectURL(file);
+  imagePoints = [];
+  renderLandmarkList();
+});
+
+canvas.addEventListener("click", (e) => {
+  if (imagePoints.length >= LANDMARKS.length) return;
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = (e.clientX - rect.left) * scaleX;
+  const y = (e.clientY - rect.top) * scaleY;
+  imagePoints.push([x, y]);
+  ctx.fillStyle = "red";
+  ctx.beginPath();
+  ctx.arc(x, y, 6, 0, 2 * Math.PI);
+  ctx.fill();
+  renderLandmarkList();
+});
+
+function renderLandmarkList() {
+  const list = document.getElementById("landmark-list");
+  list.innerHTML = "";
+  LANDMARKS.forEach((lm, i) => {
+    const div = document.createElement("div");
+    div.className = "landmark " + (i < imagePoints.length ? "done" : i === imagePoints.length ? "active" : "");
+    div.textContent = `${i + 1}. ${lm.label}`;
+    list.appendChild(div);
+  });
+}
+
+document.getElementById("add-roster-row").addEventListener("click", () => {
+  const row = document.createElement("div");
+  row.className = "roster-row";
+  row.innerHTML = `<input type="text" placeholder="track_id" class="track-id" />
+                    <input type="text" placeholder="player name" class="player-name" />`;
+  document.getElementById("roster-rows").appendChild(row);
+});
+
+document.getElementById("export-calibration").addEventListener("click", () => {
+  if (imagePoints.length !== LANDMARKS.length) {
+    alert(`Click all ${LANDMARKS.length} landmarks first (${imagePoints.length} done).`);
+    return;
+  }
+  const calibration = {
+    image_points: imagePoints,
+    court_points_ft: LANDMARKS.map((l) => l.court),
+    landmarks_used: LANDMARKS.map((l) => l.label).join(" | "),
+    basket_x_ft: parseFloat(document.getElementById("basket-x").value),
+    segmentation_mode: document.getElementById("has-cuts").checked ? "cuts" : "heuristic",
+  };
+  download("calibration.json", calibration);
+});
+
+document.getElementById("export-roster").addEventListener("click", () => {
+  const track_id_to_name = {};
+  document.querySelectorAll(".roster-row").forEach((row) => {
+    const id = row.querySelector(".track-id").value.trim();
+    const name = row.querySelector(".player-name").value.trim();
+    if (id && name) track_id_to_name[id] = name;
+  });
+  download("roster.json", { track_id_to_name });
+});
+
+function download(filename, obj) {
+  const text = JSON.stringify(obj, null, 2);
+  document.getElementById("output").value = text;
+  const blob = new Blob([text], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+}
+
+renderLandmarkList();
+</script>
+</body>
+</html>

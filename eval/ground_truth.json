@@ -1,0 +1,277 @@
+{
+  "_instructions": "Watch data/raw/freeflowbasketball_oxnard.mp4 (or use the frontend video player) at each start_ts-end_ts window. Fill in ball_handler_track_id with the GLOBAL player ID (see game_state.json roster.track_id_to_name / unmapped_track_ids) who had the ball for most of the possession, and outcome with one of: made_2, made_3, missed, turnover, foul, unknown. The _pipeline_predicted_* fields are the perception pipeline's own guess, shown only as a reference hint -- do not treat them as correct, that is exactly what this file is checking. Known issue: player identity (track IDs) is unreliable across possessions (documented in game_state.json meta.notes), so the SAME real player may show a different _pipeline_predicted_handler ID in different possessions -- judge each possession by what you actually see in the video, not by ID consistency.",
+  "video_path": "data/raw/freeflowbasketball_oxnard.mp4",
+  "possessions": [
+    {
+      "possession_id": "p001",
+      "start_ts": 0.0,
+      "end_ts": 2.93,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 1,
+      "_pipeline_predicted_handler_confidence": 0.49
+    },
+    {
+      "possession_id": "p002",
+      "start_ts": 2.93,
+      "end_ts": 8.93,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 3,
+      "_pipeline_predicted_handler_confidence": 0.48
+    },
+    {
+      "possession_id": "p003",
+      "start_ts": 8.93,
+      "end_ts": 20.68,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 8,
+      "_pipeline_predicted_handler_confidence": 0.72
+    },
+    {
+      "possession_id": "p004",
+      "start_ts": 20.68,
+      "end_ts": 24.75,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 9,
+      "_pipeline_predicted_handler_confidence": 0.07
+    },
+    {
+      "possession_id": "p005",
+      "start_ts": 24.75,
+      "end_ts": 31.87,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 1,
+      "_pipeline_predicted_handler_confidence": 0.03
+    },
+    {
+      "possession_id": "p006",
+      "start_ts": 31.87,
+      "end_ts": 36.32,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 5,
+      "_pipeline_predicted_handler_confidence": 0.48
+    },
+    {
+      "possession_id": "p007",
+      "start_ts": 36.32,
+      "end_ts": 40.5,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 17,
+      "_pipeline_predicted_handler_confidence": 0.62
+    },
+    {
+      "possession_id": "p008",
+      "start_ts": 40.5,
+      "end_ts": 46.8,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 8,
+      "_pipeline_predicted_handler_confidence": 0.67
+    },
+    {
+      "possession_id": "p009",
+      "start_ts": 46.8,
+      "end_ts": 55.3,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 5,
+      "_pipeline_predicted_handler_confidence": 0.22
+    },
+    {
+      "possession_id": "p010",
+      "start_ts": 55.3,
+      "end_ts": 58.87,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 10,
+      "_pipeline_predicted_handler_confidence": 0.78
+    },
+    {
+      "possession_id": "p011",
+      "start_ts": 58.87,
+      "end_ts": 71.77,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 18,
+      "_pipeline_predicted_handler_confidence": 0.83
+    },
+    {
+      "possession_id": "p012",
+      "start_ts": 71.77,
+      "end_ts": 79.93,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 10,
+      "_pipeline_predicted_handler_confidence": 0.51
+    },
+    {
+      "possession_id": "p013",
+      "start_ts": 79.93,
+      "end_ts": 86.67,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 1,
+      "_pipeline_predicted_handler_confidence": 0.48
+    },
+    {
+      "possession_id": "p014",
+      "start_ts": 86.67,
+      "end_ts": 91.12,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 14,
+      "_pipeline_predicted_handler_confidence": 0.0
+    },
+    {
+      "possession_id": "p015",
+      "start_ts": 91.12,
+      "end_ts": 122.3,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 16,
+      "_pipeline_predicted_handler_confidence": 0.53
+    },
+    {
+      "possession_id": "p016",
+      "start_ts": 122.3,
+      "end_ts": 131.65,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 16,
+      "_pipeline_predicted_handler_confidence": 0.59
+    },
+    {
+      "possession_id": "p017",
+      "start_ts": 131.65,
+      "end_ts": 175.78,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 8,
+      "_pipeline_predicted_handler_confidence": 0.67
+    },
+    {
+      "possession_id": "p018",
+      "start_ts": 175.78,
+      "end_ts": 183.23,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 4,
+      "_pipeline_predicted_handler_confidence": 0.67
+    },
+    {
+      "possession_id": "p019",
+      "start_ts": 183.23,
+      "end_ts": 190.0,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 3,
+      "_pipeline_predicted_handler_confidence": 0.45
+    },
+    {
+      "possession_id": "p020",
+      "start_ts": 190.0,
+      "end_ts": 202.1,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 31,
+      "_pipeline_predicted_handler_confidence": 0.0
+    },
+    {
+      "possession_id": "p021",
+      "start_ts": 202.1,
+      "end_ts": 211.33,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 27,
+      "_pipeline_predicted_handler_confidence": 0.06
+    },
+    {
+      "possession_id": "p022",
+      "start_ts": 211.33,
+      "end_ts": 235.47,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 42,
+      "_pipeline_predicted_handler_confidence": 0.0
+    },
+    {
+      "possession_id": "p023",
+      "start_ts": 235.47,
+      "end_ts": 243.62,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 13,
+      "_pipeline_predicted_handler_confidence": 0.56
+    },
+    {
+      "possession_id": "p024",
+      "start_ts": 243.62,
+      "end_ts": 285.77,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 17,
+      "_pipeline_predicted_handler_confidence": 0.31
+    },
+    {
+      "possession_id": "p025",
+      "start_ts": 285.77,
+      "end_ts": 309.88,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 35,
+      "_pipeline_predicted_handler_confidence": 0.25
+    },
+    {
+      "possession_id": "p026",
+      "start_ts": 309.88,
+      "end_ts": 320.18,
+      "ball_handler_track_id": null,
+      "outcome": "made_2",
+      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "_pipeline_predicted_handler": 41,
+      "_pipeline_predicted_handler_confidence": 0.43
+    },
+    {
+      "possession_id": "p027",
+      "start_ts": 320.18,
+      "end_ts": 352.18,
+      "ball_handler_track_id": null,
+      "outcome": "unknown",
+      "notes": "Final possession -- clip just ends here, not necessarily following a make. Left as unknown.",
+      "_pipeline_predicted_handler": 26,
+      "_pipeline_predicted_handler_confidence": 0.52
+    }
+  ],
+  "_labeling_method": "Time-constrained: outcomes were inferred by Claude from the known fact that this source video was edited to cut immediately after every made basket (confirmed by the project owner), not from independent human review of each shot. ball_handler_track_id was left unlabeled -- verifying it independently requires either ID-overlay video or manual position-matching against game_state.json, neither of which was feasible in the time available. Treat this ground truth file as a directional check on outcome/possession-boundary logic, not a fully independent human-verified label set."
+}

@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* A palette tied to the subject — hardwood and game-ball tones — instead of
+   Tailwind's default blue/indigo scale, which is the single most common
+   tell that a UI was left at AI-generated defaults. */
+:root {
+  --court-ivory: #f7f3ec;
+  --ink: #211a14;
+  --hardwood: #2a2019;
+  --hardwood-line: #4a382b;
+  --court-orange: #e8590c;
+  --court-orange-dark: #b8430a;
+  --whistle: #f2b705;
+}
+
+@theme inline {
+  --color-court-ivory: var(--court-ivory);
+  --color-ink: var(--ink);
+  --color-hardwood: var(--hardwood);
+  --color-hardwood-line: var(--hardwood-line);
+  --color-court-orange: var(--court-orange);
+  --color-court-orange-dark: var(--court-orange-dark);
+  --color-whistle: var(--whistle);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}

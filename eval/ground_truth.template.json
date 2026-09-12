@@ -1,0 +1,14 @@
+{
+  "_instructions": "Copy this file to ground_truth.json and fill in ~20 possessions by watching the real clip. track_id values must match the track IDs assigned by the perception pipeline for this specific video (check roster.unmapped_track_ids in game_state.json, or the roster map you built in calibration_ui). outcome must be one of: made_2, made_3, missed, turnover, foul, unknown.",
+  "video_path": "data/raw/REPLACE_WITH_ACTUAL_FILENAME.mp4",
+  "possessions": [
+    {
+      "possession_id": "gt001",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "ball_handler_track_id": null,
+      "outcome": "unknown",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+.next/
+out/
+.env
+.env.local
+*.pt
+*.onnx
+
+# large media / generated artifacts — never commit raw or processed video
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/processed/clips/*
+!data/processed/clips/.gitkeep
+
+*.mp4
+*.mov
+*.avi
+
+.DS_Store
+Thumbs.db

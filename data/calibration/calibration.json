@@ -1,0 +1,41 @@
+{
+  "image_points": [
+    [
+      700.6260296540363,
+      652.9266281945589
+    ],
+    [
+      942.6029654036245,
+      630.7666941467436
+    ],
+    [
+      988.4678747940692,
+      733.6521022258862
+    ],
+    [
+      1271.5650741350908,
+      695.6636438582028
+    ]
+  ],
+  "court_points_ft": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      50
+    ],
+    [
+      19,
+      17
+    ],
+    [
+      19,
+      33
+    ]
+  ],
+  "landmarks_used": "Near baseline corner, left sideline | Near baseline corner, right sideline | Free-throw line, left edge of lane | Free-throw line, right edge of lane",
+  "basket_x_ft": 0,
+  "segmentation_mode": "cuts"
+}
