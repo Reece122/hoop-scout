@@ -1,5 +1,7 @@
 # hoop-scout
 
+**[Watch the demo video](demo/hoop_scout_demo.mp4)**
+
 An agentic basketball scouting analyst. It ingests a short piece of fixed-camera
 game film and produces a written scouting report where every claim cites a
 specific timestamped possession and carries an explicit confidence score.
