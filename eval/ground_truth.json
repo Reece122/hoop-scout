@@ -8,7 +8,7 @@
       "end_ts": 2.93,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p001.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 1,
       "_pipeline_predicted_handler_confidence": 0.49
     },
@@ -18,7 +18,7 @@
       "end_ts": 8.93,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p002.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 3,
       "_pipeline_predicted_handler_confidence": 0.48
     },
@@ -28,7 +28,7 @@
       "end_ts": 20.68,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p003.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 8,
       "_pipeline_predicted_handler_confidence": 0.72
     },
@@ -38,7 +38,7 @@
       "end_ts": 24.75,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p004.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 9,
       "_pipeline_predicted_handler_confidence": 0.07
     },
@@ -48,7 +48,7 @@
       "end_ts": 31.87,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p005.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 1,
       "_pipeline_predicted_handler_confidence": 0.03
     },
@@ -58,7 +58,7 @@
       "end_ts": 36.32,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p006.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 5,
       "_pipeline_predicted_handler_confidence": 0.48
     },
@@ -67,8 +67,8 @@
       "start_ts": 36.32,
       "end_ts": 40.5,
       "ball_handler_track_id": null,
-      "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "outcome": "unknown",
+      "notes": "Human-verified correction: watching data/processed/clips/p007.mp4 shows the clip stopping after a normal pass, not a made basket -- the \"cut follows every make\" assumption does not hold for every possession. Originally mislabeled made_2 from that assumption alone; caught by direct video review.",
       "_pipeline_predicted_handler": 17,
       "_pipeline_predicted_handler_confidence": 0.62
     },
@@ -78,7 +78,7 @@
       "end_ts": 46.8,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p008.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 8,
       "_pipeline_predicted_handler_confidence": 0.67
     },
@@ -88,7 +88,7 @@
       "end_ts": 55.3,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p009.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 5,
       "_pipeline_predicted_handler_confidence": 0.22
     },
@@ -98,7 +98,7 @@
       "end_ts": 58.87,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p010.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 10,
       "_pipeline_predicted_handler_confidence": 0.78
     },
@@ -108,7 +108,7 @@
       "end_ts": 71.77,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p011.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 18,
       "_pipeline_predicted_handler_confidence": 0.83
     },
@@ -118,7 +118,7 @@
       "end_ts": 79.93,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p012.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 10,
       "_pipeline_predicted_handler_confidence": 0.51
     },
@@ -127,8 +127,8 @@
       "start_ts": 79.93,
       "end_ts": 86.67,
       "ball_handler_track_id": null,
-      "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "outcome": "missed",
+      "notes": "Human-verified correction: watching data/processed/clips/p013.mp4 shows a missed shot, not a make. Originally mislabeled made_2 from the editing-convention assumption alone; caught by direct video review.",
       "_pipeline_predicted_handler": 1,
       "_pipeline_predicted_handler_confidence": 0.48
     },
@@ -138,7 +138,7 @@
       "end_ts": 91.12,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p014.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 14,
       "_pipeline_predicted_handler_confidence": 0.0
     },
@@ -148,7 +148,7 @@
       "end_ts": 122.3,
       "ball_handler_track_id": null,
       "outcome": "made_2",
-      "notes": "Outcome inferred from known editing convention (cut follows every made basket, per user) not independent frame verification of shot location -- treat 2pt vs 3pt as unverified, only \"made\" is established.",
+      "notes": "Human-verified by watching data/processed/clips/p015.mp4: confirmed make. 2pt vs 3pt not independently verified.",
       "_pipeline_predicted_handler": 16,
       "_pipeline_predicted_handler_confidence": 0.53
     },
@@ -273,5 +273,5 @@
       "_pipeline_predicted_handler_confidence": 0.52
     }
   ],
-  "_labeling_method": "Time-constrained: outcomes were inferred by Claude from the known fact that this source video was edited to cut immediately after every made basket (confirmed by the project owner), not from independent human review of each shot. ball_handler_track_id was left unlabeled -- verifying it independently requires either ID-overlay video or manual position-matching against game_state.json, neither of which was feasible in the time available. Treat this ground truth file as a directional check on outcome/possession-boundary logic, not a fully independent human-verified label set."
+  "_labeling_method": "possessions p001-p015 were human-verified: the project owner watched each clip in data/processed/clips/ directly and confirmed or corrected the outcome. This caught two real errors in the initial Claude-drafted labels -- p007 (labeled made_2, actually stops after a normal pass with no shot) and p013 (labeled made_2, actually a missed shot) -- showing the 'cut always follows a make' assumption doesn't hold for every possession. possessions p016-p027 remain Claude-drafted from that same editing-convention assumption and have NOT been independently reviewed; treat that portion as a weaker, directional signal only. ball_handler_track_id was left unlabeled throughout -- verifying it independently requires either ID-overlay video or manual position-matching against game_state.json, neither of which was feasible in the time available."
 }

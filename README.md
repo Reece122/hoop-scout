@@ -122,15 +122,17 @@ Run both and regenerate the table below with:
 ### Results
 
 Run against the real clip (`data/raw/freeflowbasketball_oxnard.mp4`, 27 possessions,
-`segmentation_mode=cuts`). **Methodology note:** under a hard time constraint, ground
-truth in `eval/ground_truth.json` was labeled by Claude rather than independently by
-a human — outcomes were inferred from a known fact about the source footage (the
-editor cuts immediately after every made basket), not from frame-by-frame shot
-verification, and `ball_handler_track_id` was left unlabeled entirely since verifying
-it independently needs either ID-overlay video or manual position-matching, neither
-of which was feasible in the time available. Treat this as a directional check on
-possession-boundary and outcome-abstention logic, not a fully independent human eval.
-See `eval/ground_truth.json`'s `_labeling_method` field for the exact caveat.
+`segmentation_mode=cuts`). **Methodology note:** possessions p001-p015 were human-verified
+— the project owner watched each clip in `data/processed/clips/` directly and confirmed
+or corrected the outcome. That review caught two real errors in the initial Claude-drafted
+labels (p007 and p013 were both labeled `made_2` from the "editor cuts after every make"
+assumption, but are actually a possession that ends on a normal pass and a missed shot,
+respectively) — a concrete example of that assumption not holding universally, not just
+a hypothetical caveat. Possessions p016-p027 remain Claude-drafted from that same
+assumption and have not been independently reviewed; `ball_handler_track_id` was left
+unlabeled throughout, since verifying it needs either ID-overlay video or manual
+position-matching, neither of which was feasible in the time available. See
+`eval/ground_truth.json`'s `_labeling_method` field for the full breakdown.
 
 | Metric | Value |
 |---|---|
@@ -138,7 +140,7 @@ See `eval/ground_truth.json`'s `_labeling_method` field for the exact caveat.
 | Matched (IoU >= 0.5) | 27 |
 | Mean boundary IoU | 1.00 |
 | Ball-handler attribution accuracy | N/A (no independent labels — see note above) |
-| Outcome accuracy | 4% (expected: the perception layer never guesses an outcome by design, so any labeled "made_2" scores as a mismatch against its "unknown") |
+| Outcome accuracy | 7% (expected: the perception layer never guesses an outcome by design, so it only scores a "hit" on the 2 possessions ground truth also marks "unknown"; every real outcome label scores as a mismatch) |
 | Findings with supported citations | 2 / 5 |
 | Citation support rate | 40% |
 
